@@ -18,14 +18,13 @@
     "react-scripts": "3.3.0",
     "prop-types": "latest"
   },
-  "homepage": "24vita.io",
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d build"
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
