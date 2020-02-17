@@ -14,15 +14,16 @@ const useStyles = makeStyles(theme => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
-  },
   link: {
     margin: theme.spacing(2, 2.5),
     textDecoration: "none",
     color: "inherit",
     fontWeight: "500"
   },
+  get24VitaBtn: {
+    display: 'flex',
+    marginLeft: 'auto'
+  }
 }));
 
 export default function NavBar() {
@@ -35,7 +36,7 @@ export default function NavBar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <Button href={"#"}><img src={logo} height={'50'} alt="logo"/></Button>
           </IconButton>
-          <nav style={{flexGrow: 1}}>
+          <nav style={{display: 'flex', justifyContent: 'space-between'}}>
             <Link variant="button" to="/#about" className={classes.link}>
               ABOUT US
             </Link>
@@ -49,7 +50,7 @@ export default function NavBar() {
               TERMS & CONDITIONS
             </Link>
           </nav>
-          <Button href="/#/contact" color="secondary" variant="outlined">
+          <Button className={classes.get24VitaBtn} href="/#/contact" color="secondary" variant="outlined">
             GET 24VITA
           </Button>
         </Toolbar>
